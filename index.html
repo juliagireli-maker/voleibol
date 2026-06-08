@@ -20,10 +20,14 @@
                 max-width: 800px;
                 margin: 0 auto;
                 padding: 16px;
+                display: flex;
             }
             img{
-                width: 400px;
-                height: 400px;
+                width: 300px;
+                height: 300px;
+            }
+            .artigo-autor{
+                font-weight: bold;
             }
         </style>
     </head>
@@ -33,8 +37,15 @@
         </header> 
         <main>
             <img src="imagemblog.jpeg" alt="Ilustração de jogadora de vôlei com uniforme azul e o número 7, se preparando para atacar a bola. Na parte inferior, uma faixa azul escura exibe o texto "VOLEI BLOG".">
-        <p>Por: Jujudopix </p>
-        <p>Bem vindo ao meu blog! Aqui vou compartilhar conhecimentos sobre o voleibol</p>
+         <div>
+            <p class="artigo-autor">Por: Jujudopix </p>
+            <p>Bem vindo ao meu blog! Aqui vou compartilhar conhecimentos sobre o voleibol</p>
+            <button>​❤️ ​​<span></span>0</button>
+        </div>
+
         </main>
     </body>
+    <script>
+        const botao = document.querySelector("button")
+    </script>
 </html>
