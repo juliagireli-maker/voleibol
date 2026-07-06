@@ -42,17 +42,18 @@
     </header>
     <main>
         <article>      
-              <img src="imagemblog.jpeg"
-            alt="Ilustração de jogadora de vôlei com uniforme azul e o número 7, se preparando para atacar a bola. Na parte inferior, uma faixa azul escura exibe o texto">
-        <div>
-            <p class="artigo-autor">Por: Jujudopix </p>
-            <p>Bem vindo ao meu blog! Aqui vou compartilhar conhecimentos sobre o voleibol</p>
-            <button>​❤️​ ​​<span>0</span></button>
-            <button>​​👎🏼​ ​​<span>0</span></button>
-        </div>
-        <main>
+                <img src="imagemblog.jpeg"
+                alt="Ilustração de jogadora de vôlei com uniforme azul e o número 7, se preparando para atacar a bola. Na parte inferior, uma faixa azul escura exibe o texto">
+                <div>
+                    <p class="artigo-autor">Por: Jujudopix </p>
+                    <p>Bem vindo ao meu blog! Aqui vou compartilhar conhecimentos sobre o voleibol</p>
+                    <button>​❤️​ ​​<span>0</span></button>
+                    <button>​​👎🏼​ ​​<span>0</span></button>
+                </div>
+    <main>
 
         </article>
+        <article>
             <img src="imagemblog.jpeg"
             alt="Ilustração de jogadora de vôlei com uniforme azul e o número 7, se preparando para atacar a bola. Na parte inferior, uma faixa azul escura exibe o texto ">
             <div>
@@ -61,14 +62,6 @@
             <button>​❤️​ ​​<span>0</span></button>
             <button>​​👎🏼​ ​​<span>0</span></button>
             </div>
-
-
-            
-
-            
-
-
-        <article>
 
         </article>
 
@@ -79,11 +72,18 @@
     const botoes = document.querySelectorAll("button")
 
     botoes.forEach(function (botao) {
+        let curtiu = false;
         botao.addEventListener("click", botaoClicado)
         function botaoClicado() {
             console.log("fui clicado");
             let texto = botao.querySelector("span");
-            texto.textContent++;
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
         }
 
     })
