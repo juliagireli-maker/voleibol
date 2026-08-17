@@ -5,6 +5,8 @@
        --cor-texto: #000000;
        --cor-contraste:  #f1e7dd;
        --cor-botao:  #e7d3c0;
+
+       --fonte-texto: 'Segoe UI', sans-serif;
     }
     
     .tema-escuro{
@@ -17,10 +19,22 @@
 
     }
     
+    .tema-esuro a{
+        color: var(--cor-secundaria);
+    }
     
-    
+    .tema-escuro p {
+        color: var*(--cor-texto);
+    }
+   
+
+    .tema-escuro header p {
+        color: var(--cor-contraste);
+    }
+   
     body{
-       max: width 100vw; ;
+       max-width: 100vw; ;
+       font-family: 'Segoe UI', sans-serif;
     }
       header {
 
