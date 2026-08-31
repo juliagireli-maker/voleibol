@@ -1,30 +1,28 @@
+
 const botoes = document.querySelectorAll("button");
 
 botoes.forEach(function (botao) {
-    let curtiu = false; 
+    let curtiu = false; // Variável de controle local para cada botão
 
-    botao.addEventListener("click", botaoClicado);
-       function botaoClicado(){
-         let texto = botao.querySelector("span");
-         if (botao.curtiu === false) {
+    botao.addEventListener("click", function () {
+        let texto = botao.querySelector("span");
+
+        if (curtiu === false) {
             texto.textContent++;
             curtiu = true;
-         } else {
-             texto.textContent--;
-             curtiu = false;
+        } else {
+            texto.textContent--;
+            curtiu = false;
         }
-    }    
+    });    
 });
 
-const btnTemaEscuro = document.querySelectorAll(".btn-tema-escuro");
+ querySelector (caso seja apenas um botão) 
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
- btnTemaEscuro.addEventListener("click", mudaTema);
-
- function mudaTema(){
-    const corpoPagina = document.body;
-    if(corpoPagina.classList.contains("tema-escuro")){
-        corpoPagina.classList.remove("tema-escuro")
-    } else {
-        corpoPagina.classList.add("tema-escuro");
-    }
- }
+if (btnTemaEscuro) {
+    btnTemaEscuro.addEventListener("click", function () {
+        const corpoPagina = document.body;
+        corpoPagina.classList.toggle("tema-escuro"); // O toggle substitui o if/else de adicionar/remover
+    });
+}
